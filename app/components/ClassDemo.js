@@ -17,7 +17,7 @@ class ClassDemo extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount!');
+    console.log('componentDidMount! api calls may be made here');
   }
 
   render() {
@@ -58,7 +58,11 @@ class ClassDemo extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate! nextProps:', prevProps, ' nextState:', prevState);
+    console.log('componentDidUpdate!  api calls may be made here nextProps:', prevProps, ' nextState:', prevState);
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount! stop long running processes here');
   }
 }
 
